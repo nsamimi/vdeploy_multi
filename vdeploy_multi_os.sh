@@ -103,9 +103,7 @@ do
   if [ "$ANS" == "y" ]; then
     cat <<EOF >>${VFILE}
   config.vm.box = "${OS}"
-  if [ "${VER}" != "" ]; then
   config.vm.box_version = "${VER}"
-  fi
 
   config.vm.define "${NODASH}" do |${NODASH}|
     ${NODASH}.vm.hostname = "${VM}"
