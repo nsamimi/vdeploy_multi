@@ -69,7 +69,6 @@ do
   read -e OS
 # echo ${OS}  
 
-  echo
   echo -n "Version? "
   read -e VER
 # echo ${VER}  
