@@ -107,6 +107,7 @@ EOF
   if [ ! -z "${VER}" ]; then
     cat <<EOF >>${VFILE}
   config.vm.box_version = "${VER}"
+
 EOF
   fi
 
