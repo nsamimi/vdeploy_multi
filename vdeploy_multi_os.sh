@@ -97,14 +97,14 @@ do
 
   echo ""
   echo -e "Summary of server ${VM} settings:"
-  echo -e "\t${Red}Project:${NC} ${PROJ}\t${Red}O.S.:${NC} ${OS}\t${Red}CPU:${NC} ${CPU}\t${Red}Memory:${NC} ${MEM}\t${Red}Network:${NC} ${NET}.0"
+  echo -e "\t${Red}Project:${NC}\n\t${PROJ}\n\t${Red}O.S.:${NC}\n\t${OS}\n\t${Red}CPU:${NC}\n\t${CPU}\n\t${Red}Memory:${NC}\n\t${MEM}\n\t${Red}Network:${NC}\t\n${NET}.0"
   echo -en "Looks good [y/n]? "
   read -e ANS
   if [ "$ANS" == "y" ]; then
     cat <<EOF >>${VFILE}
   config.vm.box = "${OS}"
   if [ "${VER}" != "" ]; then
-    config.vm.box_version = "${VER}"
+  config.vm.box_version = "${VER}"
   fi
 
   config.vm.define "${NODASH}" do |${NODASH}|
