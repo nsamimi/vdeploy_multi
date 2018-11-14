@@ -97,7 +97,7 @@ do
 
   echo ""
   echo -e "Summary of server ${VM} settings:"
-  echo -e "\t${Red}Project:${NC}\n\t${PROJ}\n\t${Red}O.S.:${NC}\n\t${OS}\n\t${Red}CPU:${NC}\n\t${CPU}\n\t${Red}Memory:${NC}\n\t${MEM}\n\t${Red}Network:${NC}\t\n${NET}.0"
+  echo -e "\t${Red}Project:${NC}\t${PROJ}\n\t${Red}O.S.:${NC}\t${OS}\n\t${Red}CPU:${NC}\t${CPU}\n\t${Red}Memory:${NC}\t${MEM}\n\t${Red}Network:${NC}\t${NET}.0"
   echo -en "Looks good [y/n]? "
   read -e ANS
   if [ "$ANS" == "y" ]; then
