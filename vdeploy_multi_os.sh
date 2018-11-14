@@ -109,6 +109,10 @@ EOF
   config.vm.box_version = "${VER}"
 
 EOF
+  else
+    cat <<EOF >>${VFILE}
+    
+EOF
   fi
 
     cat <<EOF >>${VFILE}
