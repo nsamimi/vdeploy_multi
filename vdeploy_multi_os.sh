@@ -110,6 +110,7 @@ EOF
 EOF
   fi
 
+    cat <<EOF >>${VFILE}
   config.vm.define "${NODASH}" do |${NODASH}|
     ${NODASH}.vm.hostname = "${VM}"
     ${NODASH}.vm.network :private_network, ip: "${NET}.8${CNT}"
