@@ -154,8 +154,37 @@ echo
 cat ${VFILE}
 echo
 vagrant status
+
+# Populating provision.sh with some basic commands.
+cat << EOF > ${PPATH}/provision/provision.sh
+#
+# How to re-run provision again
+# vagrant provision <hostname>
+#
+
+BASHRC() {
+  echo  >>\${1}
+  echo set -o vi >>\${1}
+  echo alias c='clear' >>\${1}
+  echo  >>\${1}
+
+}
+
+BASHRC /home/vagrant/.bashrc
+BASHRC /root/.bashrc
+
+#apt-get update && apt-get upgrade -y
+apt-get upgrade -y
+
+apt-get install -y tree git
+
+#curl -L https://bootstrap.saltstack.com -o install_salt.sh
+#sh install_salt.sh -P -M
+
+EOF
+
 echo -e "${Green}"
-cat <<EOF
+cat << EOF
 *************************************************************************
 * Check if the Vagrantfile looks good!
 * Modify the ${PROJ}/provision/provision.sh for post configuration!
