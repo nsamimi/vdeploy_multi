@@ -1,5 +1,5 @@
 #!/bin/bash
-# source ~/bin/color.conf
+source ~/bin/color.conf
 
 set -e
 
