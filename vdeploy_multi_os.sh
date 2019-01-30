@@ -80,11 +80,11 @@ do
     CPU=2
   fi
 
-  echo -n "Memory (bytes) [512]? "
+  echo -n "Memory (bytes) [1024]? "
   read -e MEM
 # echo ${MEM}
   if [ "${MEM}" == "" ]; then
-    MEM=512
+    MEM=1024
   fi
 
   echo -n "Network [192.168.56.0]? "
@@ -96,7 +96,7 @@ do
 # echo ${NET}
 
   echo ""
-  echo -e "Summary of server ${VM} settings:"
+  echo -e "Summary of server ${Yellow}${VM}${NC} settings:"
   echo -e "\t${Red}Project:${NC}\t${PROJ}\n\t${Red}O.S.:${NC}\t\t${OS}\n\t${Red}Version:${NC}\t${VER}\n\t${Red}CPU:${NC}\t\t${CPU}\n\t${Red}Memory:${NC}\t\t${MEM}\n\t${Red}Network:${NC}\t${NET}.0"
   echo -en "Looks good [y/n]? "
   read -e ANS
